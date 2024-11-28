@@ -1,0 +1,287 @@
+body {
+  background-color: #55aaaa;
+  font-family: "R95 Sans Serif 24pt";
+  background-image: url("../assets/windows_95_clouds-pixelated.png");
+  background-size: cover;
+}
+
+.btn {
+  background-color: #c3c7cb;
+  padding-top: 5px;
+  padding-inline: 20px;
+  padding-bottom: 5px;
+  margin: 2px;
+  border: none;
+  color: black;
+  font-size: 15px;
+  font-family: "R95 Sans Serif 12pt";
+  box-shadow: inset 1px 1px 0 1px white, inset 0 0 0 1px #868a8e, 1px 1px 0 0 black;
+}
+.btn:active {
+  padding-top: 5px;
+  padding-inline: 20px;
+  padding-bottom: 5px;
+  outline: 1px dotted black;
+  outline-offset: -5px;
+  box-shadow: inset 1px 1px 0 1px black, inset 0 0 0 1px #868a8e, 0.5px 0.5px 0 0.5px white;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #b6babe;
+}
+
+.btn-close {
+  background-color: #c3c7cb;
+  padding: 1px;
+  margin: 2px;
+  border: none;
+  color: black;
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+  font-family: "R95 Sans Serif 12pt";
+  box-shadow: inset 1px 1px 0 1px white, inset 0 0 0 1px #868a8e, 1px 1px 0 0 black;
+  text-align: center;
+}
+.btn-close:active {
+  outline: 1px dotted black;
+  outline-offset: -5px;
+  box-shadow: inset 1px 1px 0 1px black, inset 0 0 0 1px #868a8e, 0.5px 0.5px 0 0.5px white;
+}
+.btn-close:hover {
+  cursor: pointer;
+  background-color: #b6babe;
+}
+
+.select-box {
+  margin: 2px;
+  width: 150px;
+  height: 22px;
+  color: black;
+  font-size: 15px;
+  font-family: "R95 Sans Serif 12pt";
+  text-align: left;
+}
+.select-box .select__control {
+  min-height: 20px;
+  box-shadow: inset 1px 1px 0 1px black, inset 0 0 0 1px #868a8e, 0.5px 0.5px 0 0.5px white;
+  cursor: pointer;
+  padding-left: 5px;
+  background-color: white;
+}
+.select-box .select__control:hover {
+  background-color: #f0f0f0;
+}
+.select-box .select__control.select__control--menu-is-open {
+  background-color: #000e7a;
+  color: white;
+}
+.select-box .select__menu-list {
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-family: "R95 Sans Serif 12pt";
+  box-shadow: inset 0.5px 0.5px 0px 0.5px white, inset 0 0 0 1px #868a8e, 1px 0px 0 0px black, 0px 1px 0 0px black, 1px 1px 0 0px black;
+}
+.select-box .select__option {
+  cursor: pointer;
+  color: black;
+  font-size: 15px;
+  font-family: "R95 Sans Serif 12pt";
+  border: 0.5px solid #868a8e;
+  padding-left: 5px;
+}
+.select-box .select__option.select__option--is-selected {
+  background-color: #000e7a;
+  color: white;
+}
+.select-box .select__option:hover {
+  background-color: #868a8e;
+  color: white;
+}
+
+.window {
+  background-color: #c0c0c0;
+  border: 1px solid black;
+  box-shadow: inset 0.5px 0.5px 0px 0.5px white, inset 0 0 0 1px #868a8e, 1px 0px 0 0px black, 0px 1px 0 0px black, 1px 1px 0 0px black;
+  width: 300px;
+  height: 300px;
+  padding: 1px;
+  font-size: 15px;
+  color: black;
+  cursor: default;
+}
+
+.install_screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#install {
+  height: 100px;
+  margin: 5px;
+}
+#install .main {
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  color: black;
+  text-align: left;
+  position: relative;
+}
+#install .main svg {
+  width: 50px;
+  height: 50px;
+}
+#install .main p {
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+#install .input {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  justify-content: flex-end;
+}
+#install .input .btn {
+  height: 20px;
+  padding-top: 3px;
+  padding-inline: 10px;
+  margin-left: 10px;
+}
+
+.header {
+  font-family: "R95 Sans Serif 12pt";
+  color: white;
+  background-color: #000e7a;
+  text-align: left;
+  display: flex;
+}
+.header .btn-close {
+  margin-left: auto;
+}
+.header .title {
+  margin-left: 3px;
+  display: flex;
+  align-items: center;
+}
+.header .title svg {
+  margin-right: 3px;
+}
+
+.progress-bar {
+  width: 500px;
+  height: 20px;
+  background-color: #c3c7cb;
+  border: 1px solid black;
+  box-shadow: inset 0.5px 0.5px 0px 0.5px white, inset 0 0 0 1px #868a8e, 1px 0px 0 0px black, 0px 1px 0 0px black, 1px 1px 0 0px black;
+  margin: 2px;
+  padding: 1px;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress-bar .progress {
+  background-color: #000e7a;
+  height: 100%;
+  width: 0;
+}
+.progress-bar .text {
+  position: relative;
+  top: -100%;
+}
+
+.taskbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c3c7cb;
+  color: black;
+  font-family: "R95 Sans Serif 12pt";
+  height: 30px;
+  padding: 3px;
+  box-shadow: inset 0.5px 0.5px 0px 0.5px white, inset 0 0 0 1px #868a8e, 1px 0px 0 0px black, 0px 1px 0 0px black, 1px 1px 0 0px black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.taskbar .start {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 0 1px white, inset 0 0 0 1px #868a8e, 1px 1px 0 0 black;
+  height: 100%;
+  padding: 0 5px;
+}
+.taskbar .start img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.taskbar .start:hover {
+  background-color: #b6babe;
+}
+.taskbar .start:active {
+  box-shadow: inset 1px 1px 0 1px black, inset 0 0 0 1px #868a8e, 0.5px 0.5px 0 0.5px white;
+}
+.taskbar .time {
+  margin-right: 5px;
+  box-shadow: inset 1px 1px 0 1px black, inset 0 0 0 1px #868a8e, 0.5px 0.5px 0 0.5px white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 5px;
+  cursor: default;
+}
+
+#aboutme {
+  height: 200px;
+  position: absolute;
+}
+
+.text-box {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 21px);
+  font-size: 15px;
+  color: black;
+  text-align: left;
+  position: relative;
+}
+.text-box .text-area {
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: inset 1px 1px 0 1px black, inset 0 0 0 1px #868a8e, 0.5px 0.5px 0 0.5px white;
+  margin: 2px;
+  padding: 5px;
+  cursor: text;
+}
+.text-box .text-area > * {
+  margin: 0;
+}
+
+#projects {
+  height: 200px;
+  position: absolute;
+  top: 50px;
+  left: 500px;
+}
+#projects > * {
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

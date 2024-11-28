@@ -1,0 +1,326 @@
+// var
+$btn-bgclr: #c3c7cb;
+$grey: #868a8e;
+$btn-hvr: #b6babe;
+$headerblue: #000e7a;
+$windowbg: #c0c0c0;
+$shadowout: inset 0.5px 0.5px 0px 0.5px white, inset 0 0 0 1px $grey,
+            1px 0px 0 0px black, 0px 1px 0 0px black, 1px 1px 0 0px black;
+$shadowin: inset 1px 1px 0 1px white, inset 0 0 0 1px $grey, 1px 1px 0 0 black;
+$shadowinput: inset 1px 1px 0 1px black, inset 0 0 0 1px $grey, .5px .5px 0 .5px white;
+
+
+// code
+body {
+    background-color: #55aaaa;
+    font-family: 'R95 Sans Serif 24pt';
+    background-image: url("../assets/windows_95_clouds-pixelated.png");
+    background-size: cover;
+}
+
+.btn{
+    background-color: $btn-bgclr;
+    padding-top: 5px;
+    padding-inline: 20px;
+    padding-bottom: 5px;
+    margin: 2px;
+    border: none;
+    color: black;
+    font-size: 15px;
+    font-family: "R95 Sans Serif 12pt";
+    box-shadow: $shadowin;
+
+    &:active{
+        padding-top: 5px;
+        padding-inline: 20px;
+        padding-bottom: 5px;
+        outline: 1px dotted black;
+        outline-offset: calc(5px * -1);
+        box-shadow: $shadowinput;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $btn-hvr;
+    }
+}
+
+.btn-close {
+    background-color: $btn-bgclr;
+    padding: 1px;
+    margin: 2px;
+    border: none;
+    color: black;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    font-family: "R95 Sans Serif 12pt";
+    box-shadow: $shadowin;
+    text-align: center;
+
+    &:active {
+        outline: 1px dotted black;
+        outline-offset: calc(5px * -1);
+        box-shadow: $shadowinput;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: $btn-hvr;
+    }
+}
+
+.select-box{
+    margin: 2px;
+    width: 150px;
+    height: 22px;
+    color: black;
+    font-size: 15px;
+    font-family: "R95 Sans Serif 12pt";
+    text-align: left;
+    
+
+    .select__control{
+        min-height: 20px;
+        box-shadow: $shadowinput;
+        cursor: pointer;
+        padding-left: 5px;
+        background-color: white;
+
+        &:hover{
+            background-color: #f0f0f0;
+        }
+
+        &.select__control--menu-is-open{
+            background-color: $headerblue;
+            color: white;
+        }
+    }
+
+    .select__menu-list{
+        background-color: white;
+        color: black;
+        font-size: 15px;
+        font-family: "R95 Sans Serif 12pt";
+        box-shadow: $shadowout;
+    }
+
+    .select__option{
+        cursor: pointer;
+        color: black;
+        font-size: 15px;
+        font-family: "R95 Sans Serif 12pt";
+        border: .5px solid $grey;
+        padding-left: 5px;
+
+        &.select__option--is-selected{
+            background-color: $headerblue;
+            color: white;
+        }
+
+        &:hover{
+            background-color: $grey;
+            color: white;
+        }
+    }
+}
+
+.window{
+    background-color: $windowbg;
+    border: 1px solid black;
+    box-shadow: $shadowout;
+    width: 300px;
+    height: 300px;
+    padding: 1px;
+    font-size: 15px;
+    color: black;
+    cursor: default;
+}
+
+.install_screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#install{
+    height: 100px;
+    margin: 5px;
+
+    .main{
+        display: flex;
+        width: 100%;
+        font-size: 15px;
+        color: black;
+        text-align: left;
+        position: relative;
+
+        svg{
+            width: 50px;
+            height: 50px;
+        }
+        p{
+            margin-top: 10px;
+            margin-bottom: 0;
+            margin-left: 5px;
+        }
+    }
+
+    .input{
+        display: flex;
+        width: 100%;
+        text-align: left;
+        justify-content: flex-end;
+
+        .btn{
+            height: 20px;
+            padding-top: 3px;
+            padding-inline: 10px;
+            margin-left: 10px;
+        }
+    }
+}
+
+.header{
+    font-family: "R95 Sans Serif 12pt";
+    color: white;
+    background-color: $headerblue;
+    text-align: left;
+    display: flex;
+
+    .btn-close{
+        margin-left: auto;
+    }
+    .title{
+        margin-left: 3px;
+        display: flex;
+        align-items: center;
+
+        svg{
+            margin-right: 3px;
+        }
+    }
+}
+
+.progress-bar{
+    width: 500px;
+    height: 20px;
+    background-color: $btn-bgclr;
+    border: 1px solid black;
+    box-shadow: $shadowout;
+    margin: 2px;
+    padding: 1px;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .progress{
+        background-color: $headerblue;
+        height: 100%;
+        width: 0;
+    }
+    .text{
+        position: relative;
+        top: -100%;
+    }
+}
+
+.taskbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $btn-bgclr;
+    color: black;
+    font-family: "R95 Sans Serif 12pt";
+    height: 30px;
+    padding: 3px;
+    box-shadow: $shadowout;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    .start{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: $shadowin;
+        height: 100%;
+        padding: 0 5px;
+
+        img{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        &:hover{
+            background-color: $btn-hvr;
+        }
+
+        &:active{
+            box-shadow: $shadowinput;
+        }
+    }
+
+    .time{
+        margin-right: 5px;
+        box-shadow: $shadowinput;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 0 5px;
+        cursor: default;
+    }
+}
+
+#aboutme{
+    height: 200px;
+    position: absolute;
+}
+
+.text-box {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 21px);
+    font-size: 15px;
+    color: black;
+    text-align: left;
+    position: relative;
+
+    .text-area {
+        width: 100%;
+        background-color: white;
+        border: 1px solid black;
+        box-shadow: $shadowinput;
+        margin: 2px;
+        padding: 5px;
+        cursor: text;
+
+        >* {
+            margin: 0;
+        }
+    }
+}
+
+#projects{
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 500px;
+
+    > *{
+        margin: 0;
+    }
+}
